@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/edit.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Add Item</title>
+  </head>
+  <body>
+    <%- include('../components/navbar')%>
+
+    <div class="container">
+      <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+        <li class="tab">
+          <a class="active" href="#test1">Update Katalog Obat</a>
+        </li>
+      </ul>
+      <form id="test1" action="/items/<%= items._id%>" method="post">
+        <div class="col">
+          <div class="row">
+            <div class="input-group col s6">
+              <label>Nama Obat</label>
+              <input
+                type="text"
+                name="nama_obat"
+                value="<%= items.nama_obat%>"
+              />
+              <input type="hidden" name="id" value="<%= items._id%>" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Kode Obat</label>
+              <input
+                type="text"
+                name="kode_obat"
+                value="<%= items.kode_obat%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Zat Aktif</label>
+              <input
+                type="text"
+                name="zat_aktif"
+                value="<%= items.zat_aktif%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Indikasi</label>
+              <input type="text" name="indikasi" value="<%= items.indikasi%>" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Harga</label>
+              <input type="text" name="hnappn" value="<%= items.hnappn%>" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Link Gambar</label>
+              <input
+                type="text"
+                name="link_gambar"
+                value="<%= items.link_gambar%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Untuk Pasien</label>
+              <input type="text" name="pasien" value="<%= items.pasien%>" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Kontra Indikasi</label>
+              <input
+                type="text"
+                name="kontra_indikasi"
+                value="<%= items.kontra_indikasi%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Dosis Obat</label>
+              <input type="text" name="dosis" value="<%= items.dosis%>" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Deskripsi Obat</label>
+              <input
+                type="text"
+                name="description"
+                value="<%= items.description%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Aturan Pakai</label>
+              <input
+                type="text"
+                name="aturan_pakai"
+                value="<%= items.aturan_pakai%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Efek Samping</label>
+              <input
+                type="text"
+                name="efek_samping"
+                value="<%= items.efek_samping%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Golongan Obat</label>
+              <input type="text" name="golongan" value="<%= items.golongan%>" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Upselling I</label>
+              <input
+                type="text"
+                name="upselling_1"
+                value="<%= items.upselling_1%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Harga Upselling I</label>
+              <input
+                type="text"
+                name="hargaupselling_1"
+                value="<%= items.hargaupselling_1%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Upselling II</label>
+              <input
+                type="text"
+                name="upselling_2"
+                value="<%= items.upselling_2%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Harga Upselling II</label>
+              <input
+                type="text"
+                name="hargaupselling_2"
+                value="<%= items.hargaupselling_2%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Upselling III</label>
+              <input
+                type="text"
+                name="upselling_3"
+                value="<%= items.upselling_3%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Harga Upselling III</label>
+              <input
+                type="text"
+                name="hargaupselling_3"
+                value="<%= items.hargaupselling_3%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Crosselling 1</label>
+              <input
+                type="text"
+                name="crosseling_1"
+                value="<%= items.crosseling_1%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Harga Crosselling 1</label>
+              <input
+                type="text"
+                name="hargacrosseling_1"
+                value="<%= items.hargacrosseling_1%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Crosselling 2</label>
+              <input
+                type="text"
+                name="crosseling_2"
+                value="<%= items.crosseling_2%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Harga Crosselling 2</label>
+              <input
+                type="text"
+                name="hargacrosseling_2"
+                value="<%= items.hargacrosseling_2%>"
+              />
+            </div>
+
+            <div class="input-group col s6">
+              <label>Crosselling 3</label>
+              <input
+                type="text"
+                name="crosseling_3"
+                value="<%= items.crosseling_3%>"
+              />
+            </div>
+
+            <div class="input-group col s12">
+              <label>Harga Crosselling 3</label>
+              <input
+                type="text"
+                name="hargacrosseling_3"
+                value="<%= items.hargacrosseling_3%>"
+              />
+            </div>
+
+            <!-- <div class="input-field col s3">
+              <p>
+                <label>
+                  <input name="dewasa" type="checkbox" />
+                  <span>Dewasa</span>
+                </label>
+              </p>
+            </div>
+
+            <div class="input-field col s3">
+              <p>
+                <label>
+                  <input name="anak" type="checkbox" />
+                  <span>Anak-Anak</span>
+                </label>
+              </p>
+            </div>
+
+            <div class="input-field col s3">
+              <p>
+                <label>
+                  <input name="bayi" type="checkbox" />
+                  <span>Bayi</span>
+                </label>
+              </p>
+            </div> -->
+
+            <button class="waves-effect waves-light btn" type="submit">
+              Update
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".tabs").tabs();
+      });
+    </script>
+  </body>
+</html>

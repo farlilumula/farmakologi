@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: #fff;
+  line-height: 1.65;
+  padding-bottom: 1000px;
+}
+
+.container-satu {
+  width: 100%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: -30px;
+}
+
+.kolom-utama {
+  flex: 1.5;
+}
+
+.kolom-utama .card {
+  position: relative;
+  border: black;
+  border-radius: 10px;
+  width: 275px;
+  height: 299px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.kolom-utama .card img {
+  width: 275px;
+  height: 299px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.kolom-utama p {
+  align-items: center;
+  display: inline-block;
+}
+
+.sidebar-satu {
+  flex: 3;
+}
+
+.warning {
+  color: red;
+}
+
+.sidebar-satu h3 {
+  font-size: 1.8em;
+}
+
+.sidebar-dua {
+  flex: 1;
+}
+
+.sidebar-dua h3 {
+  font-size: 1.8em;
+}
+
+nav {
+  background-color: #0e153a;
+}
+
+nav .nav-wrapper a span {
+  margin-left: 70px;
+  font-family: poppins;
+  font-size: 18px;
+}
+
+nav .nav-wrapper img {
+  width: 60px;
+  height: 60px;
+}
+
+.edit a {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: auto;
+}

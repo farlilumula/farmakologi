@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="additem.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Add Item</title>
+  </head>
+  <body>
+    <%- include('../components/navbar')%>
+
+    <div class="container">
+      <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+        <li class="tab"><a class="active" href="#test1">Add Katalog</a></li>
+        <li class="tab"><a href="#test2">Import Stok</a></li>
+        <li class="tab disabled"><a href="#test3">Add Users</a></li>
+        <li class="tab"><a href="#test4">Katalog Penyakit</a></li>
+        <li class="tab"><a href="#test0">Test 5</a></li>
+      </ul>
+
+      <div id="test2" class="col s12">
+        <form action="#">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input type="file" />
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <form id="test1" action="/items" method="post">
+        <div class="col">
+          <div class="row">
+            <div class="input-group col s6">
+              <label>NAMA OBAT</label>
+              <input type="text" name="nama_obat" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>ZAT AKTIF</label>
+              <input type="text" name="zat_aktif" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>INDIKASI</label>
+              <input type="text" name="indikasi" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>HNA + PPN</label>
+              <input type="text" name="hnappn" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>LINK GAMBAR</label>
+              <input type="text" name="link_gambar" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>PASIEN</label>
+              <input type="text" name="pasien" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>KONTRA INDIKASI</label>
+              <input type="text" name="kontra_indikasi" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>DOSIS</label>
+              <input type="text" name="dosis" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>PEMBERIAN OBAT</label>
+              <input type="text" name="pemberian_obat" />
+            </div>
+
+            <div class="input-group col s6">
+              <label>EFEK SAMPING</label>
+              <input type="text" name="efek_samping" />
+            </div>
+
+            <!-- <div class="input-field col s3">
+              <p>
+                <label>
+                  <input name="dewasa" type="checkbox" />
+                  <span>Dewasa</span>
+                </label>
+              </p>
+            </div>
+
+            <div class="input-field col s3">
+              <p>
+                <label>
+                  <input name="anak" type="checkbox" />
+                  <span>Anak-Anak</span>
+                </label>
+              </p>
+            </div>
+
+            <div class="input-field col s3">
+              <p>
+                <label>
+                  <input name="bayi" type="checkbox" />
+                  <span>Bayi</span>
+                </label>
+              </p>
+            </div> -->
+
+            <button class="waves-effect waves-light btn" type="submit">
+              Simpan
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".tabs").tabs();
+      });
+    </script>
+  </body>
+</html>

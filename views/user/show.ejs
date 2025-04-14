@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detil Product</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/product.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <%- include('../components/navbar')%><br />
+    <%- include('../components/keyword')%><br />
+    <%- include('../components/search')%>
+    <div class="container-satu">
+      <div class="kolom-utama">
+        <div class="card">
+          <div class="foto">
+            <img
+              class="materialboxed"
+              width="650"
+              src="https://play-lh.googleusercontent.com/E4UNz0WwYvKxDKs-x86hjP1PFWqamQ1ezFc_6x4lbKWQ-QUdBgR9Ns8B9PCgqs1xrro"
+            />
+          </div>
+        </div>
+        <div class="edit">
+          <a
+            href="/items/<%= item._id%>/edit"
+            class="modal-close waves-effect waves-green btn"
+            >Edit</a
+          >
+        </div>
+      </div>
+      <div class="sidebar-satu">
+        <h3><%= item.nama_obat%></h3>
+        <div class="detil-product">
+          <label class="left-align">Kandungan Obat</label>
+          <p class="warning"><%= item.zat_aktif%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Kata Kunci</label>
+          <p class="warning"><%= item.kata_kunci%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Untuk Penderita</label>
+          <p class="warning"><%= item.indikasi%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Kontra Indikasi</label>
+          <p><%= item.kontra_indikasi%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Indikasi Obat</label>
+          <p><%= item.indication%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Dosis Obat</label>
+          <p><%= item.dosis%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Deskripsi</label>
+          <p><%= item.description%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Aturan Pakai</label>
+          <p><%= item.aturan_pakai%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Efek Samping</label>
+          <p><%= item.efek_samping%></p>
+        </div>
+
+        <div class="detil-product">
+          <label class="left-align">Golongan Obat</label>
+          <p><%= item.golongan%></p>
+        </div>
+      </div>
+      <div class="sidebar-dua">
+        <h3>Upselling</h3>
+        <div class="collection">
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargaupselling_1%></span><%=
+            item.upselling_1%></a
+          >
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargaupselling_2%></span><%=
+            item.upselling_2%></a
+          >
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargaupselling_3%></span><%=
+            item.upselling_3%></a
+          >
+        </div>
+
+        <h3>Crosseling</h3>
+        <div class="collection">
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargacrosseling_1%></span><%=
+            item.crosseling_1%></a
+          >
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargacrosseling_2%></span><%=
+            item.crosseling_2%></a
+          >
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargacrosseling_3%></span><%=
+            item.crosseling_3%></a
+          >
+        </div>
+
+        <h3>Complementer</h3>
+        <div class="collection">
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargacrosseling_1%></span><%=
+            item.comp_1%></a
+          >
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargacrosseling_2%></span><%=
+            item.comp_2%></a
+          >
+          <a href="#!" class="collection-item"
+            ><span class="badge"><%= item.hargacrosseling_3%></span><%=
+            item.comp_3%></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+/* body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+
+.container-card {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.container-card .card {
+  width: 200px;
+  height: 150px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.card .card-image img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.modal-content label a {
+  display: flex;
+}
+
+.card .card-content {
+  padding: 10px;
+}
+
+.card .card-content h1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+  color: #071a52;
+  font-weight: bold;
+  margin-top: -2px;
+}
+
+.card .card-content p {
+  font-size: 0.8em;
+  margin-top: -15px;
+}
+
+.warning {
+  color: red;
+  font-size: 1em;
+}
+
+.card .card-content p span {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-footer a {
+  background: #071a52;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.7em;
+  color: white;
+  transition: 0.2s;
+}
+.price {
+  font-size: 0.7em;
+  font-weight: bold;
+  color: black;
+}
+
+.card-footer a:hover,
+.card-footer a:active {
+  background: white;
+  color: #071a52;
+}
+
+.card-footer a:active {
+  outline: 2px solid #071a52;
+}
+
+nav {
+  background-color: #0e153a;
+}
+
+nav .nav-wrapper a span {
+  margin-left: 70px;
+  font-family: poppins;
+  font-size: 18px;
+}
+
+nav .nav-wrapper img {
+  width: 60px;
+  height: 60px;
+}
+
+.page-footer {
+  background-color: #0e153a;
+}
+
+ul li {
+  display: inline;
+  margin: 5px;
+}
+
+.pareto {
+  font-size: 0.9em;
+  margin-bottom: -40px;
+  margin-left: 70px;
+  font-weight: bold;
+}

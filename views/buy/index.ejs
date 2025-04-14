@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katalog Item x</title>
+</head>
+
+<body>
+  <%- include('../components/navbar')%>
+  <form action="/buys">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">search</i>
+              <input type="text" name="keyword" id="autocomplete-input" class="autocomplete" />
+              <label for="autocomplete-input">Masukkan Kata Kunci Gaysss</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- card product -->
+
+  <div class="container-card">
+    <table class="centered">
+      <thead>
+        <tr>
+          <th>Nama Outlet</th>
+          <th>Tanggal Beli</th>
+          <th>Nama Pelanggan</th>
+          <th>Nama Item</th>
+          <th>Qty Beli</th>
+          <th>Harga</th>
+          <th>No Trx</th>
+          <th>Hubungi Pelanggan</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% buys.forEach(function(buy) { %>
+        <tr>
+          <td><%= buy.nama_outlet%></td>
+          <td><%= buy.waktu_trx%></td>
+          <td><%= buy.nama_pelanggan%></td>
+          <td><%= buy.nama_item%></td>
+          <td><%= buy.qty%></td>
+          <td><%= buy.harga%></td>
+          <td><%= buy.nomor_trx%></td>
+          <td>
+            <a href="https://api.whatsapp.com/send?phone=<%= buy.phone %>"><img
+                src="https://img.icons8.com/material-outlined/24/000000/whatsapp--v1.png" /></a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".modal").modal();
+    });
+
+    let val;
+    val = moment().format("dd-mm-yyyy");
+  </script>
+  <!-- <%- include('../components/footer')%> -->
+</body>
+
+</html>

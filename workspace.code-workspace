@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "..\\asyncronus"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "grid chart"
+  }
+}
