@@ -1,78 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Katalog Item</title>
-  </head>
-  <body>
-    <%- include('../components/navbar')%><br />
-    <%- include('../components/keyword')%>
-    <form action="/items">
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">search</i>
-                <input
-                  type="text"
-                  name="keyword"
-                  id="autocomplete-input"
-                  class="autocomplete"
-                />
-                <label for="autocomplete-input">Masukkan Kata Kunci</label>
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katalog Item</title>
+</head>
+
+<body>
+  <%- include('../components/navbar')%><br />
+  <%- include('../components/keyword')%>
+  <form action="/items">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">search</i>
+              <input type="text" name="keyword" id="autocomplete-input" class="autocomplete" />
+              <label for="autocomplete-input">Masukkan Kata Kunci</label>
             </div>
           </div>
         </div>
       </div>
-    </form>
-
-    <!-- card product -->
-
-    <div class="container-card">
-      <!-- awal Looping card -->
-      <% items.forEach(function(item) { %>
-      <div class="card">
-        <div class="card-image waves-effect waves-block waves-light">
-          <h2 class="pareto">Pareto A</h2>
-          <!-- <img class="activator" src="<%= item.link_gambar%>" /> -->
-        </div>
-        <div class="card-content">
-          <h1><%= item.nama_obat%></h1>
-          <p>zat_aktif: <span><%= item.zat_aktif%></span></p>
-        </div>
-        <div class="card-footer">
-          <div class="price"><%= item.hnappn%></div>
-          <a href="/items/<%= item._id%>">Read More</a>
-        </div>
-      </div>
-      <% }) %>
-      <!-- akhir lopping card -->
     </div>
+  </form>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".modal").modal();
-      });
-    </script>
-    <!-- <%- include('../components/footer')%> -->
-  </body>
+  <!-- card product -->
+
+  <div class="container-card">
+    <!-- awal Looping card -->
+    <% items.forEach(function(item) { %>
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <h2 class="pareto">Pareto A</h2>
+        <!-- <img class="activator" src="<%= item.link_gambar%>" /> -->
+      </div>
+      <div class="card-content">
+        <h1><%= item.nama_obat%></h1>
+        <p>zat_aktif: <span><%= item.zat_aktif%></span></p>
+      </div>
+      <div class="card-footer">
+        <div class="price"><%= item.hnappnFormatted%></div>
+        <a href="/items/<%= item._id%>">Read More</a>
+      </div>
+    </div>
+    <% }) %>
+    <!-- akhir lopping card -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".modal").modal();
+    });
+  </script>
+  <!-- <%- include('../components/footer')%> -->
+</body>
+
 </html>
