@@ -36,6 +36,7 @@ module.exports = {
         hnappnFormatted: new Intl.NumberFormat('id-ID', {
           style: 'currency',
           currency: 'IDR',
+          maximumFractionDigits: 0,
         }).format(item.hnappn),
       }));
 
